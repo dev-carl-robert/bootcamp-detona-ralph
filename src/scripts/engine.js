@@ -28,8 +28,8 @@ const state = {
     }
   }
   
-  function playSound(audioName) {
-    let audio = new Audio(`./src/audios/${audioName}.m4a`);
+  function playSound() {
+    let audio = new Audio(`./src/audios/src_audios_hit.m4a`);
     audio.volume = 0.2;
     audio.play();
   }
@@ -45,6 +45,7 @@ const state = {
     state.values.hitPosition = randomSquare.id;
   }
   
+
   function addListenerHitBox() {
     state.view.squares.forEach((square) => {
       square.addEventListener("mousedown", () => {
